@@ -14,6 +14,11 @@ function evaluateYams(dice) {
     yamsresult = 50;
   }
 
+  //Brelan
+  if (occurences === 2) {
+    yamsresult = 28;
+  }
+
   return yamsresult;
 }
 
