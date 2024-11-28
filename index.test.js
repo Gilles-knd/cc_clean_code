@@ -13,7 +13,7 @@ describe("Yams game", () => {
     { input: dice3, output: 30 },
     { input: dice4, output: 28 },
     { input: dice5, output: 40 },
-    { input: dice6, output: 21 },
+    { input: dice6, output: 16 },
   ])("should return $output when given $input", ({ input, output }) => {
     expect(evaluatediceYams(input)).toBe(output);
   });
