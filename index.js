@@ -43,23 +43,8 @@ function evaluatediceYams(dice) {
   if (isSuite) {
     return 40;
   }
-<<<<<<< HEAD
   //Chance: somme des dés
   return dice.reduce((acc, curr) => acc + curr, 0);
-=======
-
-  //Brelan
-  if (occurences === 2) {
-    yamsresult = 28;
-  }
-
-  //Carre
-  if (occurences === 3) {
-    yamsresult = 35;
-  }
-
-  return yamsresult;
->>>>>>> 446764a5f4975db688502603cf2f0a809015dbf6
 }
 
 //Grosse fonction pour suite de lancers
