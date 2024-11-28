@@ -11,9 +11,14 @@ function evaluatediceYams(dice) {
 
   const occurences = Object.values(counts);
 
-  //Yams
+  //Yams: 5 dés identiques
   if (occurences.includes(5)) {
     return 50;
+  }
+
+  //Carré: 4 dés identiques
+  if (occurences.includes(4)) {
+    return 35;
   }
 }
 
