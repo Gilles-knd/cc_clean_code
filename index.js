@@ -23,7 +23,12 @@ function evaluatediceYams(dice) {
 
   //Full: 3 dés identiques et 2 dés identiques
   if (occurences.includes(3) && occurences.includes(2)) {
-    return 25;
+    return 30;
+  }
+
+  //Brelan: 3 dés identiques
+  if (occurences.includes(3)) {
+    return 28;
   }
 }
 
