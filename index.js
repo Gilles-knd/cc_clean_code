@@ -20,6 +20,11 @@ function evaluatediceYams(dice) {
   if (occurences.includes(4)) {
     return 35;
   }
+
+  //Full: 3 dés identiques et 2 dés identiques
+  if (occurences.includes(3) && occurences.includes(2)) {
+    return 25;
+  }
 }
 
 module.exports = evaluatediceYams;
