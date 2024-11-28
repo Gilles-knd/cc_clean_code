@@ -1,4 +1,5 @@
 const dice = [1, 1, 1, 1, 1];
+const rolls = [dice, dice];
 const evaluateYams = require(".");
 
 describe("Yams game", () => {
