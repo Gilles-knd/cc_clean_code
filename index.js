@@ -30,6 +30,20 @@ function evaluatediceYams(dice) {
   if (occurences.includes(3)) {
     return 28;
   }
+
+  //Grande suite: 5 dés se suivent
+  const sortedDice = [...dice].sort((a, b) => a - b);
+  let isSuite = true;
+
+  for (let i = 0; i < sortedDice.length - 1; i++) {
+    if (sortedDice[i] + 1 !== sortedDice[i + 1]) {
+      isSuite = false;
+    }
+  }
+
+  if (isSuite) {
+    return 40;
+  }
 }
 
 module.exports = evaluatediceYams;
