@@ -19,6 +19,11 @@ function evaluateYams(dice) {
     yamsresult = 28;
   }
 
+  //Carre
+  if (occurences === 3) {
+    yamsresult = 35;
+  }
+
   return yamsresult;
 }
 
