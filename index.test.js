@@ -4,7 +4,9 @@ const dice3 = [1, 1, 1, 2, 2];
 const dice4 = [1, 3, 2, 2, 2];
 const dice5 = [1, 2, 3, 4, 5];
 const dice6 = [1, 2, 3, 4, 6];
-const evaluatediceYams = require(".");
+const rolls = [dice, dice2];
+const rolls2 = [dice, dice2, dice3, dice4, dice5, dice6];
+const { evaluatediceYams, evaluateYams } = require(".");
 
 describe("Yams game", () => {
   it.each([
@@ -16,5 +18,13 @@ describe("Yams game", () => {
     { input: dice6, output: 16 },
   ])("should return $output when given $input", ({ input, output }) => {
     expect(evaluatediceYams(input)).toBe(output);
+  });
+
+  it("should return the sum of all the rolls", () => {
+    expect(evaluateYams(rolls)).toBe(85);
+  });
+
+  it("should return the sum of all the rolls", () => {
+    expect(evaluateYams(rolls2)).toBe(199);
   });
 });

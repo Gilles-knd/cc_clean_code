@@ -1,6 +1,5 @@
 function evaluatediceYams(dice) {
   const counts = {};
-
   for (const values of dice) {
     if (!counts[values]) {
       counts[values] = 0;
@@ -48,4 +47,9 @@ function evaluatediceYams(dice) {
   return dice.reduce((acc, curr) => acc + curr, 0);
 }
 
-module.exports = evaluatediceYams;
+//Grosse fonction pour suite de lancers
+function evaluateYams(rolls) {
+  return rolls.reduce((acc, curr) => acc + evaluatediceYams(curr), 0);
+}
+
+module.exports = { evaluatediceYams, evaluateYams };
