@@ -44,6 +44,8 @@ function evaluatediceYams(dice) {
   if (isSuite) {
     return 40;
   }
+  //Chance: somme des dés
+  return dice.reduce((acc, curr) => acc + curr, 0);
 }
 
 module.exports = evaluatediceYams;
