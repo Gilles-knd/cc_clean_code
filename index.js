@@ -1,30 +1,20 @@
-//Commence par la fonction evaluate puis plays yams qui prend le tableau de list
-function evaluateYams(dice) {
-  let yamsresult = 0;
-  let occurences = 0;
+function evaluatediceYams(dice) {
+  const counts = {};
 
-  for (let i = 1; i < dice.length; i++) {
-    if (dice[i] === dice[i - 1]) {
-      occurences += 1;
+  for (const values of dice) {
+    if (!counts[values]) {
+      counts[values] = 0;
     }
+
+    counts[values] += 1;
   }
 
-  //Grande suite
-  if (occurences === 4) {
-    yamsresult = 50;
-  }
+  const occurences = Object.values(counts);
 
-  //Brelan
-  if (occurences === 2) {
-    yamsresult = 28;
+  //Yams
+  if (occurences.includes(5)) {
+    return 50;
   }
-
-  //Carre
-  if (occurences === 3) {
-    yamsresult = 35;
-  }
-
-  return yamsresult;
 }
 
-module.exports = evaluateYams;
+module.exports = evaluatediceYams;
